@@ -1,5 +1,3 @@
-
-
 /**
  * TABLE OF CONTENTS:
  *
@@ -7,13 +5,13 @@
  *  1. HELPERS
  *  2. PROFILE
 		 2.1 RESPONSIVE
-		 *    - 2.1.1 LARGE DEVICES, WIDE SCREENS
-		 *    - 2.1.2  MEDIUM DEVICES, DESKTOPS
-		 *    - 2.1.3   SMALL DEVICES, TABLETS LANDSCAPE
-		 *    - 2.1.4  SMALL DEVICES, TABLETS PORTRAIT
-		 *    - 2.1.5  EXTRA SMALL DEVICES, PHONES
+		 *    - 2.1.1 LARGE DESKTOPS & WIDE SCREENS
+		 *    - 2.1.2  LANDSCAPE TABLETS & MEDIUM TO LARGE SCREENS
+		 *    - 2.1.3  MEDIUM DEVICES, LANDSCAPE TABLETS AND LAPTOPS
+		 *    - 2.1.4  SMALL DEVICES, TABLETS 
+		 *    - 2.1.5  EXTRA SMALL DEVICES, TABLETS PORTRAIT
 		 *    - 2.1.6  CUSTOM, IPHONE RETINA
-		 2.2 FAVILINKS
+		 2.2 CONNECT BAR
  *  3. PROJECTS
  *  4. FOOTER
 
@@ -22,11 +20,13 @@
    ========================================================================== */
 
 body {
-  padding: 20px 0;
+  padding: 5vh;
   font: 300 14px 'Lato', sans-serif;
   color: #666756; /* color: #747704; */
   background: #fff;
   font-weight: 300;
+  padding-left: 1vh;
+  padding-right: 1vh;
 }
 
 hr {
@@ -37,7 +37,6 @@ img, embed, object, video {
   max-width: 100%;
 }
 
-
 /* ==========================================================================
    1. HELPERS
    ========================================================================== */
@@ -47,7 +46,11 @@ img, embed, object, video {
 }
 
 .text-muted {
-	color:#BCBBBB;
+	color: #BBB;
+}
+
+.border {
+  border: 1px solid #BCBBBB;
 }
 
 /* ==========================================================================
@@ -68,89 +71,131 @@ img, embed, object, video {
 .profile-job {
   margin: 5px;
   font-size: 1.429em;
-  margin-top: 2px
+  -webkit-margin-bottom-collapse: discard;
 }
 
 .profile-image{
-	  width: 20%;
+	  width: 25%;
     border-radius: 50%;
     margin-top:5px;
   }
 
-
-/* 2.1.1 RESPONSIVE: LARGE DEVICES, WIDE SCREENS
+/* ==========================================================================
+2.1.1 RESPONSIVE: LARGE DESKTOPS & WIDE SCREENS
    ========================================================================== */
 
-@media only screen and (max-width: 1200px) {}
-
-/* 2.1.2 RESPONSIVE: MEDIUM DEVICES, DESKTOPS
-   ========================================================================== */
-
-@media only screen and (max-width: 992px) {
-  .profile {
-    text-align: center;
-  }
+@media only screen and (min-width: 1200px) and (max-width: 1300px) {
 
   .profile-image {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    width: 16%;
-    border-radius: 50%;
-  }
-}
-
-/* 2.1.3 RESPONSIVE: SMALL DEVICES, TABLETS LANDSCAPE
-   ========================================================================== */
-
-@media only screen and (max-width: 768px) {
-  .profile {
-    text-align: center;
+    display: inline-block;
+    width: 28%;
+    margin-left:1em; 
   }
 
-  .profile-image {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    width: 16%;
-    border-radius: 50%;
-  }
-}
-.profile-name {
-  font-size: 3.286em;
-}
-
-/* 2.1.4 RESPONSIVE: SMALL DEVICES, TABLETS PORTRAIT
-   ========================================================================== */
-
-@media only screen and (max-width: 600px) {
-  .profile {
-    text-align: center;
-  }
-
-  .profile-image {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    width: 16%;
-    border-radius: 50%
-}
+  .profile-job  {
+    margin-right:.9em;
+    padding-right: 1.5vh;
   }
 
   .profile-name {
-    font-size: 2.857em;
+    padding-right: 5vh;
+  }
+
+  .connect-bar {  
+    padding-right: 3%;
   }
 }
 
-/* 2.1.5 RESPONSIVE: EXTRA SMALL DEVICES, PHONES
+/* ==========================================================================
+RESPONSIVE: LANDSCAPE TABLETS & MEDIUM TO LARGE SCREENS 
    ========================================================================== */
 
-@media only screen and (max-width: 480px) {
-  .profile.profile-name  {
-    text-align: center;
+@media only screen and (min-width: 992px) and (max-width: 1199px)  {
+
+  .profile-job {
+    padding-right: 1.5vh;
+  }
+  .profile-name {
+    padding-right: 2vh;
+  }
+}
+
+/* ==========================================================================
+2.1.2 RESPONSIVE: MEDIUM DEVICES, LANDSCAPE TABLETS AND LAPTOPS  
+   ========================================================================== */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  
+  .profile-image {
+    display: inline-block;
+    width: 30%;
+    margin-left:3em; 
+  }
+  
+  .profile-job  {
+    text-align: right;
+    padding-right: 1.5vh;
   }
 
   .profile-name  {
+    text-align: right;
+    font-size: 3em;
+    padding-right: 2vh;
+  }
+}
+
+/* ==========================================================================
+2.1.3 RESPONSIVE: SMALL DEVICES, TABLETS
+   ========================================================================== */
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  
+  .profile {
+    text-align: center;
+  }
+
+  .profile-image {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 20%;
+  }
+
+  .profile-name {
+    text-align: center;
+    font-size: 3em;
+    padding-right: .1em;
+  }
+
+  .profile-job  {
+    text-align: center;
+  }
+
+  .connect-bar {  
+    margin-top: inherit;
+    padding-right: 42%;
+  }
+}
+
+/* ==========================================================================
+2.1.4 RESPONSIVE: SMALL DEVICES, TABLETS PORTRAIT
+   ========================================================================== */
+
+@media only screen and (min-width: 481px) and (max-width: 575px) {
+  
+  .profile {
+    text-align: center;
+  }
+
+  .profile-image {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 20%;
+  }
+  
+  .profile-name {
+    font-size: 2.8em;
     text-align: center;
   }
 
@@ -158,22 +203,19 @@ img, embed, object, video {
     text-align: center;
   }
 
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    width: 16%;
-    border-radius: 50%
-  }
-
-  .profile-name {
-    font-size: 2.857em;
+  .connect-bar {  
+    margin-top: inherit;
+    padding-right: 40%;
   }
 }
 
-/* 2.1.6 RESPONSIVE: CUSTOM, IPHONE RETINA
+/* ==========================================================================
+   2.1.5 RESPONSIVE: EXTRA SMALL DEVICES, PHONES
    ========================================================================== */
 
-@media only screen and (max-width: 360px) {
+
+@media only screen and (max-width: 480px) {
+  
   .profile {
     text-align: center;
   }
@@ -182,54 +224,71 @@ img, embed, object, video {
     display: block;
     margin-right: auto;
     margin-left: auto;
-    width: 16%;
-    border-radius: 50%
+    width: 20%;
   }
 
   .profile-name {
-    font-size: 2.857em;
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .profile-job {
+    font-size:1.8em;
+    text-align: center;
+  }
+
+  .connect-bar {
+    padding-right: 39%;
   }
 }
 
-/* 2.2FAVILINKS
+/* ==========================================================================
+2.1.6 RESPONSIVE: CUSTOM, IPHONE RETINA
    ========================================================================== */
-.linkicon.emailicon {
-  background-image: url("http://completelongboard.com/images/envelope-grey.png");
-  background-size: contain;
+
+@media only screen and (max-width: 360px) {
+  
+  .profile {
+    text-align: center;
+  }
+
+  .profile-image {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 19%;
+  }
+
+  .profile-name {
+    font-size: 2em;
+    display: block;
+    text-align: center;
+  }
+
+  .profile-job  {
+    text-align: center;
+  }
+
+  .connect-bar {
+    padding-right: 36%;
+    margin-top: 1vh;
+  }
+
+  .project-image {
+    display:flex;
+  }
 }
 
-.linkicon.linkinicon {
-  background-image: url("http://www.energyoptionsnetwork.org/wp-content/themes/eon/img/linkedin.png");
-  background-size: contain;
-}
+/* ==========================================================================
+2.2 Connect Icons Bar
+   ========================================================================== */
 
-.linkicon.twittericon {
-  background-image: url("../images/twitter.png");
-  background-size: contain;
-}
-
-.linkicon.flickricon {
-  background-image: url("http://www.custompc.ie/ekmps/shops/pctech/resources/Design/flickrgrey.png");
-  background-size: contain;
-}
-
-.linkicon.githubicon {
-  background-image: url("http://www.iconsdb.com/icons/preview/gray/github-10-xxl.png");
-  background-size: contain;}
-
-.linkicon.scrollupicon {
-  background-image: url("http://storage.googleapis.com/instapage-user-media/6b67dd96/8219698-0-Circled-Chevron-Up.png");
-  background-size: contain;}
-
-.linkicon.scrolldownicon {
-  background-image: url("../images/Circled-Chevron-Down.png");
-  background-size: contain;}
-
-.linkicon.sociallink:hover {
-  -webkit-transform: scale(1.25);
-  -ms-transform: scale(1.25);
-  transform: scale(1.25);
-}
+.connect-bar {
+  margin-top: 1.75vh;
+  margin-bottom: 0;
+  list-style: none;
+  display: inline-flex;
+  }
 
 /* ==========================================================================
    3. Main Image
@@ -246,6 +305,9 @@ img, embed, object, video {
 
 .featured-work-header {
   color: #bbb;
+  margin-top: 5.5vh;
+  padding-bottom: 3vh;
+  padding-left:3vh;
 }
 
 .project {
@@ -265,12 +327,16 @@ img, embed, object, video {
   text-transform: uppercase;
   text-align: center;
   margin-top: 0px;
-  font-weight: 50px;
 }
 
 .project-link {
-  font-size: 1.143em;
+  font-size: .75em;
   color: #666756;
+  text-transform: uppercase;
+}
+
+.project-image {
+object-fit: contain;
 }
 
 /* ==========================================================================
@@ -283,5 +349,3 @@ img, embed, object, video {
   font-weight: 400;
   text-align: center;
 }
-
-

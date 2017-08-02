@@ -8,77 +8,56 @@
   <meta name="keywords" content="portfolio, HTML, CSS, JS, JavaScript, front-end, frontend, web development, data anlysis, data analyst">
   <meta name="author" content="Irene Florez">
   <title>Irene Florez - Tech Analyst Portfolio</title>
-  
+
   <!-- Normalize Stylesheet Link -->
-  <link rel=”stylesheet” src=”//normalize-css.googlecode.com/svn/trunk/normalize.css”>
+  <link rel=”stylesheet” href="normalize.css">
   
   <!-- Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300">
-
+  
   <!-- CSS -->
-  <link rel="stylesheet" href="css/styles.css">	
+  <link rel="stylesheet" href="css/styles.css"> 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-  <link rel="stylesheet" href="css/bootstrap-theme.css">
- 
-  <!-- JS -->
-  <link rel="JavaScript" href="js/bootstrap.js">
-  <link rel="JavaScript" href="js/script.js">
-  <link rel="JavaScript" href="js/bootstrap.min.js">
-  <script src="js/jquery.min.js"></script>
-</head>
-
-
-
-
+  <link rel="stylesheet" href="css/font-awesome.css">
+</head>  
 <body>
   <div class="container">
     <header class="row">
-      
-      <div class="col-md-6">
+
+      <!-- CSS col-xs-12 col-sm-6-->
+      <div class="col-sm-6">
         <img class="profile-image img-circle img-responsive" src="./img/profile.jpg" alt="Irene Florez image">
       </div>
-      
-      <div class="col-md-6 profile-text text-right text-uppercase">
+  
+      <div class="col-sm-6 profile-text">
         <h1 class="profile-name text-thin">Irene Florez</h1>
-        <h4 class="profile-job text-thin">Analytics | Strategy | Code </h2>
-        <ul class="connect-icons-bar">
-          
+        <h4 class="profile-job text-thin">Data | Strategy | Code </h4>
+        <ul class="connect-bar">
           <li>
-              <a href="mailto:Irene@www.Ireneflorez.com?subject=Hola%20from%20the%20web!">
-                <span class="w-clearfix">
-                    <img src="./img/navbar/githubicon.png">
+              <a href="https://linkedin.com/in/ireneflorez/" target="_blank">
+                <span class="fa fa-linkedin fa-lg fa-2x">
                 </span>
               </a>
           </li>
-
           <li>
-              <a href="https://github.com/IreneFlorez">
-                <span class="icon">
-                    <img src="./img/navbar/messageicon.png">
+              <a href="https://github.com/IreneFlorez" target="_blank">
+                <span class="fa fa-github fa-fg fa-2x">
                 </span>
               </a>
           </li>
+        </ul>
+      </div>  
+    </header>
+  </div> 
 
-          <li>
-          <link rel="shortcut icon" href="https://www.linkedin.com/in/ireneflorez" sizes="16x16 32x32 48x48" type="image/png">
-
-                          <span class="icon">
-                </span>
-              </a>
-          </li>
-
-      </div>
-    </header> 
-      
-      
   <!-- Line -->
     <div class="row">
         <div class="col-md-12">
           <hr>
         </div>
     </div> 
+
    <!-- Hero Image -->
       <div class="col-md-12">
       <img class="hero-img img-responsive" src="./img/data.png" alt="Place holder image">
@@ -89,70 +68,82 @@
       <div class="col-md-12">
         <h2 class="featured-work-header text-muted text-thin">Featured Work</h2>
       </div>
-
       <article class="col-md-4">
-        <a href="link" class="thumbnail" target="_blank">
-          <img src="./img/projects/NRP.png" srcset="img/thumb-project-1-1x.png 342w, img/thumb-project-1-2x.png 683w, img/thumb-project-1-3x.png 1024w, img/thumb-project-1-4x.png 1366w" class="img-responsive" alt="Title">
+        <a href="link" class="thumbnail project-image" target="_blank">
+          <img src="./img/projects/lightbulb.png" 
+            srcset="./img/projects/lightbulb_1x.png 342w, ./img/projects/lightbulb_2x.png 683w, ./img/projects/lightbulb_3x.png 1024w, ./img/projects/lightbulb_4x.png 1466w" 
+            sizes="(max-width: 360px) 75vw,
+              (max-width: 480px) 100vw, 
+              (max-width: 575px) 110vw, 
+              (max-width: 767px) 115vw, 
+              (max-width: 991px) 120vw, 
+              (max-width: 1199px) 130vw, 
+              (max-width: 1300px) 140vw"
+            class="project-image img-responsive" 
+            alt="Lightbulb image, Courtesy of Pexels Free Stock Photos">
         </a>
         <div class="project">
           <h3 class="project-title text-thin">Strategy</h3>
-          <h4 class="project-title-subhead text-thin">National Radio Project</h3>
-          <a href="link" class="project-link" target="_blank">link</a>
+          <h4 class="project-title-subhead text-thin">National Radio Project</h4>
+          <p class="project-link text-thin">
+          <span class="fa fa-github fa-lg">
+          <a href="link" target="_blank">View on Github (link coming soon)</a>
+          </span>
+          </p>
         </div>
       </article>
-
       <article class="col-md-4">
-        <a href="link" class="thumbnail" target="_blank">
-          <img src="./img/projects/wages.jpg" srcset="img/thumb-project-2-1x.png 342w, img/thumb-project-2-2x.png 683w, img/thumb-project-2-3x.png 1024w, img/thumb-project-2-4x.png 1366w" class="img-responsive" data-toggle="modal" data-target="#project1" alt="Title">
+        <a href="link" class="thumbnail project-image border" target="_blank">
+          <img src="./img/projects/wages.png" 
+              srcset="./img/projects/wages_1x.png 342w, ./img/projects/wages_2x.png 683w, ./img/projects/wages_3x.png 1024w, ./img/projects/wages_4x.png 1466w"
+              sizes="(max-width: 360px) 75vw,
+              (max-width: 480px) 100vw, 
+              (max-width: 575px) 110vw, 
+              (max-width: 767px) 115vw, 
+              (max-width: 991px) 120vw, 
+              (max-width: 1199px) 130vw, 
+              (max-width: 1300px) 140vw" 
+              class="project-image img-responsive" 
+              alt="Wages Website Redesign image">
         </a>
         <div class="project">
           <h3 class="project-title text-thin">Website Revamp</h3>
-          <h4 class="project-title-subhead text-thin">WAGES</h3>
-          <a href="link" class="project-link" target="_blank">link</a>
+          <h4 class="project-title-subhead text-thin">WAGES</h4>
+          <p class="project-link text-thin">
+          <span class="fa fa-github fa-lg">
+          <a href="link" target="_blank">View on Github (link coming soon)</a>
+          </span>
+          </p>
         </div>
       </article>
-
       <article class="col-md-4">
-        <a href="link" class="thumbnail" target="_blank">
-          <img src="./img/projects/GoogleAdwordsDashboard.png" class="img-responsive" alt="Title">
+        <a href="link" class="thumbnail project-image" target="_blank">
+          <img src="./img/projects/GoogleAdwordsDashboard.png" 
+              srcset="./img/projects/GoogleAdwordsDashboard_1x.png 342w, ./img/projects/GoogleAdwordsDashboard_2x.png 683w, ./img/GoogleAdwordsDashboard_3x.png 1024w, ./img/projects/GoogleAdwordsDashboard_4x.png 1466w" 
+              sizes="(max-width: 360px) 75vw,
+              (max-width: 480px) 100vw, 
+              (max-width: 575px) 110vw, 
+              (max-width: 767px) 115vw, 
+              (max-width: 991px) 120vw, 
+              (max-width: 1199px) 130vw, 
+              (max-width: 1300px) 140vw" 
+              class="img-responsive" 
+              alt="Google Adwords Data Dashboard sample image">
         </a>
         <div class="project">
           <h3 class="project-title text-thin">Analytics Dashboard</h3>
-          <h4 class="project-title-subhead text-thin">We Vote US</h3>
-          <a href="link" class="project-link" target="_blank">link</a>
+          <h4 class="project-title-subhead text-thin">We Vote US</h4>
+          <p class="project-link text-thin">
+          <span class="fa fa-github fa-lg"> <a href="link" target="_blank">View on Github (link coming soon)</a>
+          </span>
+          </p>
         </div>
       </article>
     </section> 
-
-
-
-
-
-  <!-- Modal -->
-<div class = "modal fade" id="project1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="myModalLabel"> Project 1</h4>
-          </div>
-          <div class="modal-body">
-            <img class="img-responsive" src="link">
-            Text
-          </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-</div>
-<!-- End Modal -->
-
 
     <footer class="row">
       <div class="footer col-md-12">
       </div>
     </footer> 
-
-  </div> 
 </body>
 </html>
